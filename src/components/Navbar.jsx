@@ -52,15 +52,31 @@ const Navbar = () => {
   const el = document.querySelector('.navbar-collapse.collapse');
 
 
-  const handleClick1 = (e) => {
+  // const handleClick1 = (e) => {
   
+  //   let a = 'mega-link';
+  //   let string = e.target.className;
+
+  //   if (string.includes(a)) {
+  //     el.classList.remove("show");
+  // }
+  // };
+
+  const handleClick1 = (e) => {
     let a = 'mega-link';
     let string = e.target.className;
-
+  
     if (string.includes(a)) {
-      el.classList.remove("show");
-  }
+      // Make sure to define 'el' properly
+      const el = document.querySelector('.show'); // Select the element you want to remove the 'show' class from
+      if (el) {  // Check if 'el' exists
+        el.classList.remove("show");
+      } else {
+        console.warn('Element with class "show" not found');
+      }
+    }
   };
+  
 
   React.useEffect(() => {
     axios.get(logo).then((response) => {

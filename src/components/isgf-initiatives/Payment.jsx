@@ -7,7 +7,11 @@ const GLOBAL = require('../../commonConstants.js');
 const assetUrl = GLOBAL.assetUrl;
 window.onload = function() {
 		var d = new Date().getTime();
-		document.getElementById("tid").value = d;
+		const inputElement = document.getElementById('tid');
+		if (inputElement) {
+			inputElement.value = 'someValue';
+		  }
+		//document.getElementById("tid").value = d;
 	};
 function Payment() {
     const cookies = new Cookies();

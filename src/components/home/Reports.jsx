@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import swal from "sweetalert";
 const GLOBAL = require("../../commonConstants");
 const news = GLOBAL.BASE_URL + "news_home";
